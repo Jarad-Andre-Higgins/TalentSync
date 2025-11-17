@@ -1,0 +1,605 @@
+======================================================================
+               TALENTSYNC DISTRIBUTED SYSTEM SIMULATION
+                    Freelance Collaboration Platform
+                  With IP Addressing & Network Animation
+======================================================================
+
+[STEP 1] Initializing Distributed Network with IP Addressing...
+
+[IP] Initialized region: cameroon-central (10.0.0.0/16)
+[IP] Initialized region: cameroon-west (10.1.0.0/16)
+[IP] Initialized region: cameroon-north (10.2.0.0/16)
+[STEP 2] Creating Microservice Nodes with IP Allocation...
+
+[IP] Created subnet for user-service in cameroon-central: 10.0.0.0/24
+[IP] Created subnet for project-service in cameroon-central: 10.0.1.0/24
+[IP] Created subnet for chat-service in cameroon-central: 10.0.2.0/24
+[IP] Created subnet for payment-service in cameroon-central: 10.0.3.0/24
+[IP] Allocated 10.0.0.2 to user-service-1 (DNS: user-service-1.cameroon-central.talentsync.local)
+[NETWORK] Registered USER_SERVICE (user-service-1) in cameroon-central @ 10.0.0.2
+[IP] Created subnet for user-service in cameroon-west: 10.1.0.0/24
+[IP] Created subnet for project-service in cameroon-west: 10.1.1.0/24
+[IP] Created subnet for chat-service in cameroon-west: 10.1.2.0/24
+[IP] Created subnet for payment-service in cameroon-west: 10.1.3.0/24
+[IP] Allocated 10.1.0.2 to user-service-2 (DNS: user-service-2.cameroon-west.talentsync.local)
+[NETWORK] Registered USER_SERVICE (user-service-2) in cameroon-west @ 10.1.0.2
+[IP] Allocated 10.0.1.2 to project-service-1 (DNS: project-service-1.cameroon-central.talentsync.local)
+[NETWORK] Registered PROJECT_SERVICE (project-service-1) in cameroon-central @ 10.0.1.2
+[IP] Allocated 10.1.1.2 to project-service-2 (DNS: project-service-2.cameroon-west.talentsync.local)
+[NETWORK] Registered PROJECT_SERVICE (project-service-2) in cameroon-west @ 10.1.1.2
+[IP] Allocated 10.0.2.2 to chat-service-1 (DNS: chat-service-1.cameroon-central.talentsync.local)
+[NETWORK] Registered CHAT_SERVICE (chat-service-1) in cameroon-central @ 10.0.2.2
+[IP] Allocated 10.1.2.2 to chat-service-2 (DNS: chat-service-2.cameroon-west.talentsync.local)
+[NETWORK] Registered CHAT_SERVICE (chat-service-2) in cameroon-west @ 10.1.2.2
+[IP] Created subnet for user-service in cameroon-north: 10.2.0.0/24
+[IP] Created subnet for project-service in cameroon-north: 10.2.1.0/24
+[IP] Created subnet for chat-service in cameroon-north: 10.2.2.0/24
+[IP] Created subnet for payment-service in cameroon-north: 10.2.3.0/24
+[IP] Allocated 10.2.2.2 to chat-service-3 (DNS: chat-service-3.cameroon-north.talentsync.local)
+[NETWORK] Registered CHAT_SERVICE (chat-service-3) in cameroon-north @ 10.2.2.2
+[IP] Allocated 10.0.3.2 to payment-service-1 (DNS: payment-service-1.cameroon-central.talentsync.local)
+[NETWORK] Registered PAYMENT_SERVICE (payment-service-1) in cameroon-central @ 10.0.3.2
+[IP] Allocated 10.1.3.2 to payment-service-2 (DNS: payment-service-2.cameroon-west.talentsync.local)
+[NETWORK] Registered PAYMENT_SERVICE (payment-service-2) in cameroon-west @ 10.1.3.2
+[IP] Created subnet for user-service in cameroon-central: 10.0.0.0/24
+[IP] Created subnet for project-service in cameroon-central: 10.0.1.0/24
+[IP] Created subnet for chat-service in cameroon-central: 10.0.2.0/24
+[IP] Created subnet for payment-service in cameroon-central: 10.0.3.0/24
+[NETWORK] Registered FILE_SERVICE (file-service-1) in cameroon-central @ None
+[IP] Created subnet for user-service in cameroon-west: 10.1.0.0/24
+[IP] Created subnet for project-service in cameroon-west: 10.1.1.0/24
+[IP] Created subnet for chat-service in cameroon-west: 10.1.2.0/24
+[IP] Created subnet for payment-service in cameroon-west: 10.1.3.0/24
+[NETWORK] Registered FILE_SERVICE (file-service-2) in cameroon-west @ None
+
+
+
+======================================================================
+               NETWORK TOPOLOGY & IP ADDRESSING
+======================================================================
+
+[REGIONAL NETWORKS]
+  cameroon-central    : 10.0.0.0/16          (Hosts: 65534)
+  cameroon-west       : 10.1.0.0/16          (Hosts: 65534)
+  cameroon-north      : 10.2.0.0/16          (Hosts: 65534)
+
+[SERVICE SUBNETS]
+  cameroon-central_user-service : 10.0.0.0/24          (Available: 252)
+    Gateway: 10.0.0.1           | Broadcast: 10.0.0.255
+  cameroon-central_project-service: 10.0.1.0/24          (Available: 252)
+    Gateway: 10.0.1.1           | Broadcast: 10.0.1.255
+  cameroon-central_chat-service : 10.0.2.0/24          (Available: 252)
+    Gateway: 10.0.2.1           | Broadcast: 10.0.2.255
+  cameroon-central_payment-service: 10.0.3.0/24          (Available: 252)
+    Gateway: 10.0.3.1           | Broadcast: 10.0.3.255
+  cameroon-west_user-service    : 10.1.0.0/24          (Available: 252)
+    Gateway: 10.1.0.1           | Broadcast: 10.1.0.255
+  cameroon-west_project-service : 10.1.1.0/24          (Available: 252)
+    Gateway: 10.1.1.1           | Broadcast: 10.1.1.255
+  cameroon-west_chat-service    : 10.1.2.0/24          (Available: 252)
+    Gateway: 10.1.2.1           | Broadcast: 10.1.2.255
+  cameroon-west_payment-service : 10.1.3.0/24          (Available: 252)
+    Gateway: 10.1.3.1           | Broadcast: 10.1.3.255
+  cameroon-north_user-service   : 10.2.0.0/24          (Available: 252)
+    Gateway: 10.2.0.1           | Broadcast: 10.2.0.255
+  cameroon-north_project-service: 10.2.1.0/24          (Available: 252)
+    Gateway: 10.2.1.1           | Broadcast: 10.2.1.255
+  cameroon-north_chat-service   : 10.2.2.0/24          (Available: 251)
+    Gateway: 10.2.2.1           | Broadcast: 10.2.2.255
+  cameroon-north_payment-service: 10.2.3.0/24          (Available: 252)
+    Gateway: 10.2.3.1           | Broadcast: 10.2.3.255
+
+[NODE IP ALLOCATIONS]
+  user-service-1           : 10.0.0.2        -> user-service-1.cameroon-central.talentsync.local
+  user-service-2           : 10.1.0.2        -> user-service-2.cameroon-west.talentsync.local
+  project-service-1        : 10.0.1.2        -> project-service-1.cameroon-central.talentsync.local
+  project-service-2        : 10.1.1.2        -> project-service-2.cameroon-west.talentsync.local
+  chat-service-1           : 10.0.2.2        -> chat-service-1.cameroon-central.talentsync.local
+  chat-service-2           : 10.1.2.2        -> chat-service-2.cameroon-west.talentsync.local
+  chat-service-3           : 10.2.2.2        -> chat-service-3.cameroon-north.talentsync.local
+  payment-service-1        : 10.0.3.2        -> payment-service-1.cameroon-central.talentsync.local
+  payment-service-2        : 10.1.3.2        -> payment-service-2.cameroon-west.talentsync.local
+======================================================================
+
+
+[STEP 3] Simulating Freelance Collaboration Workflow...
+
+
+======================================================================
+                    LIVE NETWORK VISUALIZATION
+======================================================================
+
+[1mUSER_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m user-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m user-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mPROJECT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m project-service-1    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m project-service-2    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mCHAT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m chat-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m chat-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m chat-service-3       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mPAYMENT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m payment-service-1    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m payment-service-2    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mFILE_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m file-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m file-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+======================================================================
+
+--- Scenario: New Freelancer Joins Platform ---
+[96m[00:00.013][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-1
+[ROUTED] REGISTER_USER ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 2.0%)
+
+--- Scenario: Client Creates Project ---
+[96m[00:00.170][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-1
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-1 (10.0.1.2:8002) (CPU: 2.5%)
+
+--- Scenario: Assigning Task to Freelancer ---
+[96m[00:00.353][0m [1mÔåÆ[0m ASSIGN_TASK routed to project-service-1
+[ROUTED] ASSIGN_TASK ÔåÆ project-service-1 (10.0.1.2:8002) (CPU: 2.5%)
+
+--- Scenario: Team Communication via Chat ---
+[96m[00:00.495][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 1.0%)
+[96m[00:00.495][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 1.0%)
+[96m[00:00.495][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 1.0%)
+
+--- Scenario: Process Payment with Blockchain Validation ---
+[96m[00:00.627][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-1
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-1 (10.0.3.2:8004) (CPU: 3.3%)
+[96m[00:00.627][0m [1mÔåÆ[0m VALIDATE_TASK routed to payment-service-2
+[ROUTED] VALIDATE_TASK ÔåÆ payment-service-2 (10.1.3.2:8004) (CPU: 3.3%)
+
+[STEP 4] Simulating High Traffic Load Balancing...
+
+Generating 50 concurrent requests...
+
+[96m[00:00.990][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-1
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-1 (10.0.1.2:8002) (CPU: 2.5%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-1
+[ROUTED] REGISTER_USER ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 2.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 1.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 2.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 1.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 1.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-1
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-1 (10.0.3.2:8004) (CPU: 3.3%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 4.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-2
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-2 (10.1.1.2:8002) (CPU: 2.5%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 2.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 2.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-1
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-1 (10.0.1.2:8002) (CPU: 5.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 2.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m VALIDATE_TASK routed to payment-service-2
+[ROUTED] VALIDATE_TASK ÔåÆ payment-service-2 (10.1.3.2:8004) (CPU: 3.3%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-1
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-1 (10.0.3.2:8004) (CPU: 6.7%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-2
+[ROUTED] REGISTER_USER ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 4.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 6.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 6.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 3.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 8.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-2
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-2 (10.1.3.2:8004) (CPU: 6.7%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 3.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 3.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 8.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 4.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-1
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-1 (10.0.3.2:8004) (CPU: 10.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-2
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-2 (10.1.3.2:8004) (CPU: 10.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 4.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 10.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-2
+[ROUTED] REGISTER_USER ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 10.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-2
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-2 (10.1.1.2:8002) (CPU: 5.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 4.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 12.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 12.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 14.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-2
+[ROUTED] REGISTER_USER ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 14.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m CREATE_PROJECT routed to project-service-1
+[ROUTED] CREATE_PROJECT ÔåÆ project-service-1 (10.0.1.2:8002) (CPU: 7.5%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 5.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 16.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 16.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 5.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 5.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 6.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-1
+[ROUTED] REGISTER_USER ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 18.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-2
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-2 (10.1.2.2:8003) (CPU: 6.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m REGISTER_USER routed to user-service-2
+[ROUTED] REGISTER_USER ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 18.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-3
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-3 (10.2.2.2:8003) (CPU: 6.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m PROCESS_PAYMENT routed to payment-service-1
+[ROUTED] PROCESS_PAYMENT ÔåÆ payment-service-1 (10.0.3.2:8004) (CPU: 13.3%)
+[96m[00:00.990][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-1
+[ROUTED] AUTHENTICATE ÔåÆ user-service-1 (10.0.0.2:8001) (CPU: 20.0%)
+[96m[00:00.990][0m [1mÔåÆ[0m SEND_MESSAGE routed to chat-service-1
+[ROUTED] SEND_MESSAGE ÔåÆ chat-service-1 (10.0.2.2:8003) (CPU: 7.0%)
+
+Processing requests across all nodes...
+
+[STEP 5] Demonstrating Fault Tolerance...
+
+Simulating failure of user-service-1...
+[FAULT] user-service-1 (USER_SERVICE) has failed!
+
+[FAULT TOLERANCE] Traffic will be redistributed to other USER_SERVICE nodes
+
+Routing new requests (should go to user-service-2)...
+[96m[00:03.943][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 2.0%)
+[96m[00:03.943][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 4.0%)
+[96m[00:03.943][0m [1mÔåÆ[0m AUTHENTICATE routed to user-service-2
+[ROUTED] AUTHENTICATE ÔåÆ user-service-2 (10.1.0.2:8001) (CPU: 6.0%)
+
+Recovering user-service-1...
+[RECOVERY] user-service-1 (USER_SERVICE) has recovered!
+
+[STEP 6] Performance Metrics & Statistics
+
+
+======================================================================
+                    TALENTSYNC NETWORK SUMMARY
+======================================================================
+Total Nodes: 11 (Healthy: 11, Unhealthy: 0)
+Load Balancing: LEAST_LOADED
+Total Requests Routed: 61
+Total Requests Processed: 58
+Success Rate: 98.31%
+Average CPU Usage: 0.36%
+Average Memory Usage: 0.29%
+======================================================================
+
+
+USER_SERVICE:
+  Ô£ô user-service-1: 10.0.0.2:8001 (DNS: user-service-1.cameroon-central.talentsync.local) CPU=0.0%, Requests=11, Queue=0
+  Ô£ô user-service-2: 10.1.0.2:8001 (DNS: user-service-2.cameroon-west.talentsync.local) CPU=4.0%, Requests=10, Queue=0
+
+PROJECT_SERVICE:
+  Ô£ô project-service-1: 10.0.1.2:8002 (DNS: project-service-1.cameroon-central.talentsync.local) CPU=0.0%, Requests=4, Queue=0
+  Ô£ô project-service-2: 10.1.1.2:8002 (DNS: project-service-2.cameroon-west.talentsync.local) CPU=0.0%, Requests=2, Queue=0
+
+CHAT_SERVICE:
+  Ô£ô chat-service-1: 10.0.2.2:8003 (DNS: chat-service-1.cameroon-central.talentsync.local) CPU=0.0%, Requests=8, Queue=0
+  Ô£ô chat-service-2: 10.1.2.2:8003 (DNS: chat-service-2.cameroon-west.talentsync.local) CPU=0.0%, Requests=7, Queue=0
+  Ô£ô chat-service-3: 10.2.2.2:8003 (DNS: chat-service-3.cameroon-north.talentsync.local) CPU=0.0%, Requests=7, Queue=0
+
+PAYMENT_SERVICE:
+  Ô£ô payment-service-1: 10.0.3.2:8004 (DNS: payment-service-1.cameroon-central.talentsync.local) CPU=0.0%, Requests=5, Queue=0
+  Ô£ô payment-service-2: 10.1.3.2:8004 (DNS: payment-service-2.cameroon-west.talentsync.local) CPU=0.0%, Requests=4, Queue=0
+
+FILE_SERVICE:
+  Ô£ô file-service-1: None:8005 (DNS: None) CPU=0.0%, Requests=0, Queue=0
+  Ô£ô file-service-2: None:8005 (DNS: None) CPU=0.0%, Requests=0, Queue=0
+
+======================================================================
+DETAILED SERVICE METRICS
+======================================================================
+
+======================================================================
+                    LIVE NETWORK VISUALIZATION
+======================================================================
+
+[1mUSER_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m user-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m user-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   4.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   3.2%
+
+[1mPROJECT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m project-service-1    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m project-service-2    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mCHAT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m chat-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m chat-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m chat-service-3       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mPAYMENT_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m payment-service-1    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m payment-service-2    CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+[1mFILE_SERVICE[0m
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  [92mÔùÅ[0m file-service-1       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+  [92mÔùÅ[0m file-service-2       CPU:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%  MEM:[[92m[0mÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ]   0.0%
+
+======================================================================
+
+
+======================================================================
+                  REAL-TIME METRICS DASHBOARD
+======================================================================
+
+[1mPerformance Metrics:[0m
+  Total Requests:          61
+  Successful:              58  [92mÔ£ô[0m
+  Failed:                   1  [91mÔ£ù[0m
+  Success Rate:      [[92mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[0mÔûæÔûæ]  95.08%
+  Avg Latency:        1041.50ms
+
+[1mSystem Health:[0m
+  Healthy Nodes:           11/11
+  Availability:      [[92mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[0m] 100.0%
+
+======================================================================
+
+
+USER_SERVICE:
+  Total Nodes: 2
+  Healthy Nodes: 2
+
+  Node: user-service-1
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+  Node: user-service-2
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 4.0%
+    Memory Usage: 3.2%
+    Active Requests: 2
+    Queued Requests: 0
+
+PROJECT_SERVICE:
+  Total Nodes: 2
+  Healthy Nodes: 2
+
+  Node: project-service-1
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+  Node: project-service-2
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+CHAT_SERVICE:
+  Total Nodes: 3
+  Healthy Nodes: 3
+
+  Node: chat-service-1
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+  Node: chat-service-2
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+  Node: chat-service-3
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+PAYMENT_SERVICE:
+  Total Nodes: 2
+  Healthy Nodes: 2
+
+  Node: payment-service-1
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+  Node: payment-service-2
+    Status: HEALTHY
+    IP Address: N/A
+    CPU Usage: 0.0%
+    Memory Usage: 0.0%
+    Active Requests: 0
+    Queued Requests: 0
+
+======================================================================
+BLOCKCHAIN VALIDATION RECORDS (Payment Service)
+======================================================================
+
+payment-service-2 (10.1.3.2:8004): 2 validations
+  Ô£ô Task: task-789... | Proof: 7b12d5f925b10a96... | Validated: True
+  Ô£ô Task: N/A... | Proof: ae2432526fa13db8... | Validated: True
+
+======================================================================
+[STEP 7] FILE TRANSFER SIMULATION & DISTRIBUTED STORAGE
+======================================================================
+
+[Initializing File Service Infrastructure]
+[STORAGE] Registered node file-service-1 with 100GB capacity
+[STORAGE] Registered node file-service-2 with 100GB capacity
+  Ô£ô Registered 2 storage nodes with 100GB each
+  Ô£ô Replication factor: 2x
+  Ô£ô FileTransferSimulator configured (100 MB/s, 5ms latency)
+  Ô£ô Network metrics tracker initialized
+
+[Scenario 1: Upload Project Design Document]
+  Uploading: project_design.pdf (50MB)
+  Owner: john@example.cm
+
+  Transfer Progress:
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 0.0 MB/s | ETA: 0.0s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 249.1 MB/s | ETA: 0.0s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 124.7 MB/s | ETA: 0.0s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 83.1 MB/s | ETA: 0.0s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 62.3 MB/s | ETA: 0.0s
+
+  Ô£ô Upload Complete!
+    Total Throughput: 62.32 MB/s
+    Latency: 5.00ms
+    Packet Loss: 2.00%
+
+  Storing in distributed storage with 2x replication...
+[STORAGE] Stored file 'project_design.pdf' (52428800 bytes) on 2 nodes
+  Ô£ô File stored successfully
+  Ô£ô Storage locations: ['file-service-1', 'file-service-2']
+
+[Scenario 2: Download Project Document]
+  Downloading: project_design.pdf (50MB)
+  From storage location: Multiple replicas available
+
+  Transfer Progress:
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 0.0 MB/s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 249.6 MB/s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 124.7 MB/s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 83.2 MB/s
+    [ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê] 100.0% | 62.4 MB/s
+
+  Ô£ô Download Complete!
+    Total Throughput: 62.36 MB/s
+    Checksum Verified: Ô£ô
+
+======================================================================
+DISTRIBUTED FILE STORAGE REPORT
+======================================================================
+
+======================================================================
+               DISTRIBUTED STORAGE INFORMATION
+======================================================================
+
+[OVERALL STATISTICS]
+  Total Nodes:        2
+  Total Capacity:     200.00 GB
+  Total Used:         0.10 GB
+  Total Available:    199.90 GB
+  Usage:              0.0%
+  Total Files:        1
+  Replication Factor: 2x
+
+[NODE BREAKDOWN]
+  file-service-1      
+    Capacity:     100.00 GB
+    Used:           0.05 GB (  0.0%)
+    Available:     99.95 GB
+    Files:      1
+  file-service-2      
+    Capacity:     100.00 GB
+    Used:           0.05 GB (  0.0%)
+    Available:     99.95 GB
+    Files:      1
+
+[STORED FILES]
+  project_design.pdf
+    ID:        38120ec2...
+    Size:      50.00 MB
+    Type:      document
+    Owner:     john@example.cm
+    Replicas:  2
+    Nodes:     file-service-1, file-service-2
+======================================================================
+
+
+======================================================================
+FILE TRANSFER SUMMARY
+======================================================================
+
+Completed Transfers: 2
+  ÔÇó UPLOAD: design_doc_001
+    Size: 50.00 MB
+    Throughput: 62.32 MB/s
+    Latency: 5.00ms
+    Packet Loss: 2.00%
+  ÔÇó DOWNLOAD: design_doc_download_001
+    Size: 50.00 MB
+    Throughput: 62.36 MB/s
+    Latency: 5.00ms
+    Packet Loss: 1.00%
+
+======================================================================
+SIMULATION COMPLETED SUCCESSFULLY
+======================================================================
+
+Key Distributed Systems Concepts Demonstrated:
+  Ô£ô Microservices Architecture
+  Ô£ô Horizontal Scalability
+  Ô£ô Load Balancing (Least Loaded Strategy)
+  Ô£ô Fault Tolerance & High Availability
+  Ô£ô Distributed Data Storage (PostgreSQL + Redis simulation)
+  Ô£ô IP Addressing & CIDR Subnetting
+  Ô£ô DNS Resolution & Service Discovery
+  Ô£ô Network Visualization & Animation
+  Ô£ô Real-time Performance Metrics
+  Ô£ô Blockchain-based Task Validation
+  Ô£ô Real-time Communication (WebSocket simulation)
+  Ô£ô Service Discovery & Routing
+  Ô£ô File Transfer Simulation (Bandwidth Throttling & Packet Loss)
+  Ô£ô Distributed File Storage (Multi-node Replication)
+  Ô£ô Network Metrics Tracking (Throughput, Latency, ETA)
+  Ô£ô Progress Tracking & Transfer Management
+======================================================================
+
